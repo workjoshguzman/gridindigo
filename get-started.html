@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Discuss a Requirement | Grid Indigo</title>
+<meta name="description" content="Tell Grid Indigo about your requirement and explore how we can help deliver it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070f;--bg2:#0d0d1c;--card:#12122499;--line:#ffffff1f;--tx:#f2f2f8;--mut:#a3a3bd;--ind:#4B20E6;--pink:#FF337A;--ind-l:#8c6bff;--grad:linear-gradient(90deg,#4B20E6,#FF337A);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+h1,h2,p{margin:0}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--ind-l);outline-offset:3px}
+.split{display:grid;grid-template-columns:minmax(380px,42%) 1fr;min-height:100vh}
+/* left: full-bleed panel */
+.L{position:sticky;top:0;height:100vh;overflow:hidden;padding:40px 56px;display:flex;flex-direction:column;background:radial-gradient(ellipse 90% 60% at 0 0,#4B20E680,transparent 70%),radial-gradient(ellipse 70% 50% at 100% 100%,#FF337A40,transparent 70%),#0b0a1c;border-right:1px solid var(--line)}
+.L::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(#000,transparent 80%);-webkit-mask-image:linear-gradient(#000,transparent 80%);pointer-events:none}
+.L>*{position:relative}
+.logo img{height:38px;width:auto;display:block}
+.L h1{font-size:clamp(28px,2.7vw,40px);line-height:1.15;font-weight:600;margin:48px 0 16px;letter-spacing:-.01em}
+.L h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.L .intro{color:var(--mut);font-size:15px;max-width:440px}
+.exp{margin:32px 0 0;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ind-l);font-weight:600}
+.ex{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px;font-size:14px;color:#d8d8ea}
+.ex li{display:flex;gap:12px;align-items:baseline}
+.ex li::before{content:"";flex:none;width:7px;height:7px;border-radius:2px;background:var(--grad);transform:translateY(-1px) rotate(45deg)}
+.art{margin-top:auto;padding-top:20px}
+.art img{width:100%;max-width:420px;height:auto;display:block;opacity:.9;margin-bottom:14px}
+.art b{display:block;font-weight:600;font-size:15px}
+.art small{color:var(--mut);font-size:13px}
+/* right */
+.R{padding:40px 6vw 64px;display:flex;flex-direction:column;min-height:100vh}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mut)}
+.top a:hover{color:#fff}
+.prog{margin-top:44px}
+.pt{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:12px}
+.pt b{color:#fff}
+.seg{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.seg i{height:4px;border-radius:4px;background:var(--line);transition:background .3s}
+.seg i.on{background:var(--grad)}
+.wrap{max-width:640px;width:100%;margin:0 auto;flex:1;display:flex;flex-direction:column}
+form{flex:1;display:flex;flex-direction:column}
+.step{display:none;animation:in .4s ease both;padding-top:36px}
+.step.show{display:block}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.step h2{font-size:clamp(28px,3vw,38px);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+.lead{color:var(--mut);margin:12px 0 32px}
+.f{display:grid;gap:26px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fl{display:block}
+.fl span,.grp legend{display:block;font-size:14px;font-weight:600;margin-bottom:6px;padding:0}
+.fl b,.grp b{color:var(--pink)}
+.fl input,.fl textarea,.fl select{width:100%;background:none;border:0;border-bottom:1.5px solid #ffffff33;border-radius:0;color:#fff;font:inherit;font-size:17px;padding:10px 0;outline:0;transition:border-color .2s}
+.fl input:focus,.fl textarea:focus,.fl select:focus{border-bottom-color:var(--ind-l);box-shadow:0 1px 0 var(--ind-l)}
+.fl textarea{resize:vertical;min-height:84px}
+.fl select{appearance:none;-webkit-appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a3a3bd' stroke-width='1.6' fill='none'/%3E%3C/svg%3E") right 4px center no-repeat}
+select option{background:#12122a}
+::placeholder{color:#7d7d98}
+.grp{border:0;padding:0;margin:0;min-width:0}
+.grp small{display:block;color:var(--mut);font-size:13px;margin:-2px 0 10px}
+.opts{display:grid;gap:8px;margin-top:10px}
+.opts.c2{grid-template-columns:1fr 1fr}
+.op{position:relative;display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;cursor:pointer;transition:border-color .2s,background .2s;font-size:14.5px;line-height:1.35}
+.op:hover{border-color:var(--ind-l)}
+.op input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.op .k{flex:none;width:26px;height:26px;border-radius:7px;border:1px solid var(--line);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--mut);transition:all .2s}
+.op:has(input:checked){border-color:var(--ind-l);background:#4B20E626}
+.op:has(input:checked) .k{background:var(--grad);border-color:transparent;color:#fff}
+.op:has(input:focus-visible){outline:2px solid var(--ind-l);outline-offset:2px}
+.ack{display:flex;gap:14px;align-items:flex-start;cursor:pointer;font-size:14.5px;position:relative}
+.ack input{position:absolute;opacity:0;width:22px;height:22px;margin:0;cursor:pointer}
+.ack .bx{flex:none;width:22px;height:22px;border-radius:6px;border:1.5px solid #ffffff55;display:grid;place-items:center;font-size:13px;color:transparent;transition:all .2s;margin-top:2px}
+.ack input:checked+.bx{background:var(--grad);border-color:transparent;color:#fff}
+.ack input:focus-visible+.bx{outline:2px solid var(--ind-l);outline-offset:3px}
+.ack a{text-decoration:underline;text-underline-offset:3px}
+.fine{font-size:12.5px;color:var(--mut)}
+.err{color:#ff7aa6;font-size:14px;min-height:22px;margin-top:22px}
+.bar{display:flex;gap:12px;margin-top:auto;padding-top:20px;align-items:center}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:15px 30px;border-radius:999px;font:600 15px "Plus Jakarta Sans",system-ui,sans-serif;border:1px solid var(--line);background:transparent;color:#fff;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--grad);border:0;margin-left:auto}
+.btn.p:hover{box-shadow:0 8px 30px #4B20E699}
+.btn[disabled]{opacity:.6;cursor:wait}
+.hp{position:absolute;left:-9999px}
+.done{padding-top:48px;animation:in .5s ease both}
+.done .tick{width:60px;height:60px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-size:26px;margin-bottom:24px}
+.done h2{font-size:clamp(30px,3.4vw,44px);font-weight:600;line-height:1.1}
+.done .lead{max-width:520px}
+.nx{display:grid;gap:0;margin:8px 0 32px;border-top:1px solid var(--line)}
+.nx div{display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.nx i{font-style:normal;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;grid-row:span 2;font-size:22px}
+.nx b{font-weight:600}
+.nx span{color:var(--mut);font-size:14px}
+.sig{margin-top:40px;color:var(--mut);font-size:14px}
+.sig b{color:#fff;display:block}
+@media(max-width:900px){
+ .split{grid-template-columns:1fr}
+ .L{position:static;height:auto;padding:28px 24px 32px}
+ .L h1{margin:28px 0 10px;font-size:26px}
+ .exp,.ex,.art{display:none}
+ .R{padding:28px 24px 48px;min-height:0}
+ .prog{margin-top:28px}
+ .two,.opts.c2{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="split">
+ <aside class="L">
+  <a class="logo" href="index.html" aria-label="Grid Indigo home"><img src="images/logo.svg" alt="Grid Indigo" width="101" height="38"></a>
+  <h1>Let’s talk about what you need <span>to deliver.</span></h1>
+  <p class="intro">Tell us about your project, technical requirements, or delivery challenges. We’ll use the information to understand what you need and explore how Grid Indigo may be able to support you.</p>
+  <div class="exp">What to expect</div>
+  <ul class="ex"><li>A conversation focused on your requirements</li><li>Clearer scope and potential deliverables</li><li>An opportunity to explore the right engagement model</li></ul>
+  <div class="art"><b>Your requirement. Our delivery expertise.</b><small>Takes about 3–5 minutes · No commitment required to submit an enquiry</small></div>
+ </aside>
+
+ <main class="R">
+  <div class="top"><a href="index.html">← Back to home</a><span>Discuss a Requirement</span></div>
+  <div class="wrap">
+   <div class="prog" id="prog"><div class="pt"><span id="pl">Step 1 of 5</span><b id="pn">About you</b></div><div class="seg" id="seg" aria-hidden="true"></div></div>
+   <form id="form" novalidate>
+    <input class="hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <section class="step show" data-lab="About you"><h2>Tell us about yourself.</h2><p class="lead">Let’s start with a few details so we know who we’re speaking with and how to reach you.</p><div class="f"><div class="two"><label class="fl"><span>First name <b>*</b></span><input type="text" name="first_name" placeholder="Enter your first name" required autocomplete="given-name"></label><label class="fl"><span>Last name <b>*</b></span><input type="text" name="last_name" placeholder="Enter your last name" required autocomplete="family-name"></label></div><label class="fl"><span>Work email address <b>*</b></span><input type="email" name="email" placeholder="you@company.com" required autocomplete="email"></label><label class="fl"><span>Company name <b>*</b></span><input type="text" name="company" placeholder="Enter your company name" required autocomplete="organization"></label><label class="fl"><span>Your role</span><input type="text" name="role" placeholder="e.g. Agency Owner, Marketing Manager, Technical Lead"></label></div></section><section class="step" data-lab="Your business"><h2>Tell us about your business.</h2><p class="lead">Understanding your organisation helps us put your requirement into context.</p><div class="f"><label class="fl"><span>Business website</span><input type="url" name="website" placeholder="https://yourcompany.com" autocomplete="url"></label><fieldset class="grp" data-req><legend>Which best describes your organisation? <b>*</b></legend><div class="opts c2"><label class="op"><input type="radio" name="org_type" value="Digital or Marketing Agency"><span class="k">A</span><span class="t">Digital or Marketing Agency</span></label><label class="op"><input type="radio" name="org_type" value="Technology or Consulting Company"><span class="k">B</span><span class="t">Technology or Consulting Company</span></label><label class="op"><input type="radio" name="org_type" value="In-house Marketing Team"><span class="k">C</span><span class="t">In-house Marketing Team</span></label><label class="op"><input type="radio" name="org_type" value="Small or Medium-Sized Business"><span class="k">D</span><span class="t">Small or Medium-Sized Business</span></label><label class="op"><input type="radio" name="org_type" value="Enterprise"><span class="k">E</span><span class="t">Enterprise</span></label><label class="op"><input type="radio" name="org_type" value="Other"><span class="k">F</span><span class="t">Other</span></label></div></fieldset><label class="fl"><span>Where is your business based? <b>*</b></span><select name="country" required><option value="">Select a country</option><option>Philippines</option><option>United States</option><option>United Kingdom</option><option>Australia</option><option>Canada</option><option>Singapore</option><option>Ireland</option><option>United Arab Emirates</option><option>Germany</option><option>Netherlands</option><option>New Zealand</option><option>India</option><option>Other</option></select></label><fieldset class="grp"><legend>Who will Grid Indigo primarily support?</legend><div class="opts c2"><label class="op"><input type="radio" name="supports" value="Our internal team"><span class="k">A</span><span class="t">Our internal team</span></label><label class="op"><input type="radio" name="supports" value="Our agency or delivery team"><span class="k">B</span><span class="t">Our agency or delivery team</span></label><label class="op"><input type="radio" name="supports" value="Our clients through white-label delivery"><span class="k">C</span><span class="t">Our clients through white-label delivery</span></label><label class="op"><input type="radio" name="supports" value="A combination of these"><span class="k">D</span><span class="t">A combination of these</span></label></div></fieldset></div></section><section class="step" data-lab="Requirement"><h2>What do you need help delivering?</h2><p class="lead">Tell us what you’re working on. You don’t need to have every detail figured out yet.</p><div class="f"><fieldset class="grp" data-req><legend>Which areas best describe your requirement? <b>*</b></legend><small>Select all that apply.</small><div class="opts c2"><label class="op"><input type="checkbox" name="areas" value="Marketing Technology"><span class="k">A</span><span class="t">Marketing Technology</span></label><label class="op"><input type="checkbox" name="areas" value="Automation &amp; Integration"><span class="k">B</span><span class="t">Automation &amp; Integration</span></label><label class="op"><input type="checkbox" name="areas" value="Digital Production"><span class="k">C</span><span class="t">Digital Production</span></label><label class="op"><input type="checkbox" name="areas" value="Data &amp; Engineering"><span class="k">D</span><span class="t">Data &amp; Engineering</span></label><label class="op"><input type="checkbox" name="areas" value="QA &amp; Operations"><span class="k">E</span><span class="t">QA &amp; Operations</span></label><label class="op"><input type="checkbox" name="areas" value="I’m not sure yet"><span class="k">F</span><span class="t">I’m not sure yet</span></label></div></fieldset><label class="fl"><span>Briefly describe what you need <b>*</b></span><textarea name="description" required rows="3" placeholder="What are you trying to build, implement, improve, automate, or deliver?"></textarea></label><fieldset class="grp"><legend>What stage are you at?</legend><div class="opts c1"><label class="op"><input type="radio" name="stage" value="Exploring options"><span class="k">A</span><span class="t">Exploring options</span></label><label class="op"><input type="radio" name="stage" value="Defining requirements"><span class="k">B</span><span class="t">Defining requirements</span></label><label class="op"><input type="radio" name="stage" value="Ready to start"><span class="k">C</span><span class="t">Ready to start</span></label><label class="op"><input type="radio" name="stage" value="Looking for ongoing delivery support"><span class="k">D</span><span class="t">Looking for ongoing delivery support</span></label><label class="op"><input type="radio" name="stage" value="Need help with an existing project or issue"><span class="k">E</span><span class="t">Need help with an existing project or issue</span></label></div></fieldset></div></section><section class="step" data-lab="Goals"><h2>What does success look like?</h2><p class="lead">A little more context will help us understand your priorities and the best way to approach your requirement.</p><div class="f"><fieldset class="grp" data-req><legend>What’s your primary goal? <b>*</b></legend><div class="opts c1"><label class="op"><input type="radio" name="goal" value="Deliver a new project or implementation"><span class="k">A</span><span class="t">Deliver a new project or implementation</span></label><label class="op"><input type="radio" name="goal" value="Increase delivery capacity"><span class="k">B</span><span class="t">Increase delivery capacity</span></label><label class="op"><input type="radio" name="goal" value="Improve an existing process or system"><span class="k">C</span><span class="t">Improve an existing process or system</span></label><label class="op"><input type="radio" name="goal" value="Automate manual work or connect systems"><span class="k">D</span><span class="t">Automate manual work or connect systems</span></label><label class="op"><input type="radio" name="goal" value="Support recurring operational requirements"><span class="k">E</span><span class="t">Support recurring operational requirements</span></label><label class="op"><input type="radio" name="goal" value="Resolve a technical or delivery issue"><span class="k">F</span><span class="t">Resolve a technical or delivery issue</span></label><label class="op"><input type="radio" name="goal" value="Other"><span class="k">G</span><span class="t">Other</span></label></div></fieldset><fieldset class="grp"><legend>How would you prefer to work with a delivery partner?</legend><div class="opts c2"><label class="op"><input type="radio" name="model" value="Project Delivery"><span class="k">A</span><span class="t">Project Delivery</span></label><label class="op"><input type="radio" name="model" value="Ongoing Service"><span class="k">B</span><span class="t">Ongoing Service</span></label><label class="op"><input type="radio" name="model" value="Delivery Pod"><span class="k">C</span><span class="t">Delivery Pod</span></label><label class="op"><input type="radio" name="model" value="White-Label Delivery"><span class="k">D</span><span class="t">White-Label Delivery</span></label><label class="op"><input type="radio" name="model" value="Open to recommendations"><span class="k">E</span><span class="t">Open to recommendations</span></label></div></fieldset><fieldset class="grp"><legend>When would you ideally like to start?</legend><div class="opts c2"><label class="op"><input type="radio" name="start" value="As soon as possible"><span class="k">A</span><span class="t">As soon as possible</span></label><label class="op"><input type="radio" name="start" value="Within the next month"><span class="k">B</span><span class="t">Within the next month</span></label><label class="op"><input type="radio" name="start" value="Within 1–3 months"><span class="k">C</span><span class="t">Within 1–3 months</span></label><label class="op"><input type="radio" name="start" value="More than 3 months from now"><span class="k">D</span><span class="t">More than 3 months from now</span></label><label class="op"><input type="radio" name="start" value="Still exploring"><span class="k">E</span><span class="t">Still exploring</span></label></div></fieldset><fieldset class="grp"><legend>Estimated project budget (optional)</legend><div class="opts c2"><label class="op"><input type="radio" name="budget" value="Under US$1,000"><span class="k">A</span><span class="t">Under US$1,000</span></label><label class="op"><input type="radio" name="budget" value="US$1,000–US$3,000"><span class="k">B</span><span class="t">US$1,000–US$3,000</span></label><label class="op"><input type="radio" name="budget" value="US$3,001–US$5,000"><span class="k">C</span><span class="t">US$3,001–US$5,000</span></label><label class="op"><input type="radio" name="budget" value="US$5,001–US$10,000"><span class="k">D</span><span class="t">US$5,001–US$10,000</span></label><label class="op"><input type="radio" name="budget" value="Over US$10,000"><span class="k">E</span><span class="t">Over US$10,000</span></label><label class="op"><input type="radio" name="budget" value="Not yet determined"><span class="k">F</span><span class="t">Not yet determined</span></label></div></fieldset></div></section><section class="step" data-lab="Final details"><h2>Anything else we should know?</h2><p class="lead">Share any additional context that could help us understand your requirement.</p><div class="f"><label class="fl"><span>Additional information (optional)</span><textarea name="details" rows="4" placeholder="Relevant systems, expected deliverables, dependencies, challenges, or anything else you’d like us to know."></textarea></label><fieldset class="grp"><legend>Where did you hear about Grid Indigo? (optional)</legend><div class="opts c2"><label class="op"><input type="radio" name="source" value="LinkedIn"><span class="k">A</span><span class="t">LinkedIn</span></label><label class="op"><input type="radio" name="source" value="Search engine"><span class="k">B</span><span class="t">Search engine</span></label><label class="op"><input type="radio" name="source" value="Referral"><span class="k">C</span><span class="t">Referral</span></label><label class="op"><input type="radio" name="source" value="Social media"><span class="k">D</span><span class="t">Social media</span></label><label class="op"><input type="radio" name="source" value="Other"><span class="k">E</span><span class="t">Other</span></label></div></fieldset><fieldset class="grp" data-req><label class="ack"><input type="checkbox" name="privacy_ack" value="yes"><span class="bx" aria-hidden="true">✓</span><span>I have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and understand how Grid Indigo will use my information to respond to this enquiry. <b>*</b></span></label></fieldset><p class="fine">By submitting this form, you agree that Grid Indigo may contact you regarding your enquiry. Submitting an enquiry does not create a contractual relationship or guarantee project acceptance.</p></div></section>
+    <p class="err" id="err" role="alert"></p>
+    <div class="bar"><button type="button" class="btn" id="prev" hidden>← Back</button><button type="button" class="btn p" id="next">Continue →</button></div>
+   </form>
+   <div class="done" id="done" hidden>
+    <div class="tick">✓</div>
+    <h2>Thanks for reaching out.</h2>
+    <p class="lead" id="donemsg">Your requirement is now with Grid Indigo. We’ll review the information you’ve shared and get in touch if there’s a potential fit. If we need more context, we’ll let you know.</p>
+    <div class="exp" style="margin-top:0">What happens next?</div>
+    <div class="nx"><div><i>1</i><b>Review</b><span>We’ll review your requirement and the information you provided.</span></div><div><i>2</i><b>Clarify</b><span>If there’s a potential fit, we’ll discuss the scope, priorities, and delivery needs.</span></div><div><i>3</i><b>Define next steps</b><span>We’ll explore the appropriate engagement model and any proposed next steps.</span></div></div>
+    <a class="btn p" href="index.html" style="margin-left:0">Back to Homepage</a>
+    <p class="sig"><b>GRID INDIGO</b>Your digital delivery partner for what’s next.</p>
+   </div>
+  </div>
+ </main>
+</div>
+<script>
+(function(){
+// Paste your form service endpoint here (for example a Formspree URL). Empty = preview mode, nothing is sent.
+var ENDPOINT="";
+var steps=[].slice.call(document.querySelectorAll(".step")),n=steps.length,cur=0;
+var seg=document.getElementById("seg"),err=document.getElementById("err"),nx=document.getElementById("next"),pv=document.getElementById("prev");
+steps.forEach(function(){seg.appendChild(document.createElement("i"))});
+// optional: ?model=Delivery%20Pod preselects the engagement preference
+try{var m=new URLSearchParams(location.search).get("model");if(m)[].forEach.call(document.querySelectorAll('input[name="model"]'),function(i){if(i.value.toLowerCase()===m.toLowerCase())i.checked=true})}catch(e){}
+function go(i){
+ cur=i;err.textContent="";
+ steps.forEach(function(s,j){s.classList.toggle("show",j===i)});
+ [].forEach.call(seg.children,function(c,j){c.classList.toggle("on",j<=i)});
+ document.getElementById("pl").textContent="Step "+(i+1)+" of "+n;
+ document.getElementById("pn").textContent=steps[i].dataset.lab;
+ pv.hidden=i===0;nx.textContent=i===n-1?"Submit Enquiry →":"Continue →";
+ if(i>0||window.scrollY>0)window.scrollTo({top:0,behavior:"smooth"});
+}
+function valid(s){
+ var bad=null;
+ [].forEach.call(s.querySelectorAll("input:not(.hp),textarea,select"),function(el){if(!bad&&el.type!=="radio"&&el.type!=="checkbox"&&!el.checkValidity())bad=el});
+ if(bad){bad.focus();err.textContent=bad.type==="email"&&bad.value?"Enter a valid email address.":"Please fill in the required fields.";return false}
+ var g=[].filter.call(s.querySelectorAll("fieldset[data-req]"),function(f){return!f.querySelector("input:checked")})[0];
+ if(g){var i=g.querySelector("input");i.focus();err.textContent=i.name==="privacy_ack"?"Please confirm the privacy acknowledgement to continue.":"Please choose at least one option.";return false}
+ return true;
+}
+pv.onclick=function(){go(cur-1)};
+nx.onclick=function(){
+ if(!valid(steps[cur]))return;
+ if(cur<n-1){go(cur+1);return}
+ var f=document.getElementById("form"),o={};
+ new FormData(f).forEach(function(v,k){o[k]=o[k]?o[k]+", "+v:v});
+ if(o._gotcha)return;
+ function finish(note){f.hidden=true;document.getElementById("prog").hidden=true;if(note)document.getElementById("donemsg").textContent=note;document.getElementById("done").hidden=false;window.scrollTo({top:0,behavior:"smooth"})}
+ if(!ENDPOINT){finish("Preview mode: this form isn’t connected yet, so nothing was sent.");return}
+ nx.disabled=true;nx.textContent="Sending…";
+ fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(o)})
+ .then(function(r){if(!r.ok)throw 0;finish()})
+ .catch(function(){nx.disabled=false;nx.textContent="Submit Enquiry →";err.textContent="Something went wrong and your enquiry wasn’t sent. Please try again."});
+};
+document.getElementById("form").addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName!=="TEXTAREA"&&e.target.type!=="checkbox"&&e.target.type!=="radio"){e.preventDefault();nx.click()}});
+go(0);
+})();
+</script>
+</body>
+</html>

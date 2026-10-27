@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FAQ | Grid Indigo</title>
+<meta name="description" content="Answers about how Grid Indigo works, what we deliver, how engagements are structured, pricing, quality, AI and data, and how to get started.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070f;--bg2:#0d0d1c;--card:#12122499;--line:#ffffff1f;--tx:#f2f2f8;--mut:#a3a3bd;--ind:#4B20E6;--pink:#FF337A;--ind-l:#8c6bff;--grad:linear-gradient(90deg,#4B20E6,#FF337A);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ind-l);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h1,h2,h3,p,ul{margin:0}
+h1{font-size:clamp(38px,6vw,68px);font-weight:500;line-height:1.08}
+h2{font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.15}
+h3{font-size:18px;font-weight:600}
+.hl{background:linear-gradient(90deg,#8c6bff,#FF337A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eye{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ind-l);margin-bottom:16px;font-weight:600}
+.mut{color:var(--mut)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:14px;border:1px solid var(--line);background:transparent;color:var(--tx);cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,border-color .2s}
+.btn:hover{border-color:#fff8;transform:translateY(-2px)}
+.btn.p{background:var(--ind);border-color:var(--ind)}
+.btn.p:hover{box-shadow:0 8px 30px #4B20E699}
+.btn.g{background:var(--grad);border:0}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:#07070fcc;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.06em;line-height:1.05}
+.mark{width:28px;height:28px;background:#fff;border-radius:4px;position:relative}
+.mark::after{content:"";position:absolute;inset:7px 7px 7px 11px;background:var(--bg)}
+.links{display:flex;gap:32px;font-size:14px;color:var(--mut)}
+.links a:hover,.links a[aria-current]{color:#fff}
+.links a[aria-current]{border-bottom:2px solid var(--pink);padding-bottom:4px}
+.burger{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:8px;padding:8px 12px;font:inherit;cursor:pointer}
+@media(max-width:820px){.links,.nav>.btn{display:none}.burger{display:block}header.open .links{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--bg2);padding:20px 24px;gap:18px;border-bottom:1px solid var(--line)}}
+/* hero: left aligned, page-level */
+.ph{position:relative;overflow:hidden;padding:80px 0 72px;background:radial-gradient(ellipse 50% 80% at 90% 0,#4B20E659,transparent),radial-gradient(ellipse 40% 50% at 0 100%,#FF337A1f,transparent)}
+.ph::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000);mask-image:linear-gradient(90deg,transparent 30%,#000)}
+.ph .wrap{position:relative;display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:end}
+.ph p.lead{color:var(--mut);font-size:17px;max-width:560px;margin:22px 0 32px}
+.jump{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:22px 24px;backdrop-filter:blur(8px)}
+.jump h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+.jump a{display:flex;justify-content:space-between;padding:11px 0;border-top:1px solid var(--line);font-size:15px;transition:color .2s,padding .2s}
+.jump a:first-of-type{border-top:0}
+.jump a:hover{color:var(--ind-l);padding-left:6px}
+@media(max-width:860px){.ph .wrap{grid-template-columns:1fr}.ph{padding:56px 0}}
+/* explorer */
+.ex-head{max-width:640px;margin-bottom:44px}
+.ex-head p{margin-top:16px;color:var(--mut)}
+.ex{display:grid;grid-template-columns:290px 1fr;gap:32px;align-items:start}
+.tabs{position:sticky;top:96px;display:flex;flex-direction:column;gap:8px}
+.tabs a{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;color:var(--mut);font-weight:500;transition:all .2s}
+.tabs a:hover{color:#fff;border-color:var(--ind-l)}
+.tabs a[aria-current]{color:#fff;border-color:transparent;background:linear-gradient(135deg,#4B20E6,#a3238f 70%,#FF337A)}
+.tabs i{font-style:normal;flex:none;width:30px;height:30px;border-radius:9px;background:#ffffff14;display:grid;place-items:center;font-size:13px;font-weight:700}
+.cp{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:40px;position:relative;overflow:hidden}
+.cp::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad)}
+.js .cp{display:none}
+.js .cp.on{display:block;animation:in .45s ease both}
+.js:not(.ready) .cp{display:none}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cp+.cp{margin-top:20px}
+.js .cp+.cp{margin-top:0}
+.cp .tg{color:var(--ind-l);font-weight:600;margin-bottom:6px}
+.cp>p{color:var(--mut);margin:14px 0 30px;max-width:620px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.cols h4{margin:0 0 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.cols ul{list-style:none;padding:0;display:grid;gap:11px;font-size:15px}
+.cols li{display:flex;gap:12px}
+.cols li::before{content:"";flex:none;width:7px;height:7px;margin-top:9px;border-radius:50%;background:var(--ind-l)}
+.cols .out li::before{background:var(--pink)}
+@media(max-width:860px){.ex{grid-template-columns:1fr}.tabs{position:static;flex-direction:row;overflow-x:auto;padding-bottom:6px}.tabs a{white-space:nowrap}.cols{grid-template-columns:1fr}.cp{padding:28px 22px}}
+/* tools */
+.tools{background:var(--bg2);border-block:1px solid var(--line)}
+.tl{margin-top:40px;border-top:1px solid var(--line)}
+.tr{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center}
+.tr h3{font-size:15px;color:var(--mut);font-weight:500}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills span{padding:9px 18px;border-radius:12px;border:1px solid var(--line);background:#ffffff0a;font-weight:600;font-size:14px;transition:border-color .2s,background .2s}
+.pills span:hover{border-color:var(--ind-l);background:#4B20E626}
+.fine{margin-top:28px;font-size:13px;color:var(--mut);max-width:760px}
+@media(max-width:760px){.tr{grid-template-columns:1fr;gap:12px}}
+/* final cta */
+.fc{padding:96px 0}
+.fc .box{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;padding:56px;border-radius:26px;background:linear-gradient(120deg,#4B20E6cc,#2a1180 55%,#7a1a5c);position:relative;overflow:hidden}
+.fc .box::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,#FF337A66,transparent 70%)}
+.fc .box>*{position:relative;z-index:1}
+.fc .eye{color:#ffd0e0}
+.fc p{margin-top:14px;color:#e6e2ff}
+.fc .row{justify-content:flex-end}
+.fc .btn{border-color:#ffffff66}
+.fc .btn.w{background:#fff;color:#1a0f5c;border-color:#fff}
+@media(max-width:860px){.fc .box{grid-template-columns:1fr;padding:36px 24px}.fc .row{justify-content:flex-start}}
+footer{border-top:1px solid var(--line);padding:56px 0 32px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px}
+.fgrid h4{margin:0 0 14px;font-size:13px;font-weight:600}
+.fgrid a{display:block;color:var(--mut);margin-bottom:10px}
+.fgrid a:hover{color:#fff}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:40px;color:var(--mut);font-size:13px}
+@media(max-width:820px){.fgrid{grid-template-columns:1fr 1fr}}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+
+
+/* faq */
+.ph .wrap{display:block}
+.ph h1{max-width:760px}
+.ph .still{color:#fff;font-weight:600;margin:-8px 0 28px}
+.faq{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start}
+.fnav{position:sticky;top:96px;display:flex;flex-direction:column;gap:4px}
+.fnav a{padding:11px 14px;border-radius:12px;color:var(--mut);font-size:15px;border-left:2px solid transparent;transition:all .2s}
+.fnav a:hover{color:#fff}
+.fnav a.on{color:#fff;background:#4B20E626;border-left-color:var(--pink)}
+.srch{display:block;margin-bottom:36px}
+.srch input{width:100%;background:#ffffff0a;border:1px solid var(--line);border-radius:14px;padding:16px 20px;color:#fff;font:inherit;outline:0;transition:border-color .2s}
+.srch input:focus{border-color:var(--ind-l)}
+.fg{margin-bottom:56px;scroll-margin-top:96px}
+.fg h2{font-size:clamp(24px,3vw,32px);margin-bottom:18px}
+details{border:1px solid var(--line);border-radius:16px;background:var(--card);margin-bottom:12px;transition:border-color .2s,background .2s}
+details[open]{border-color:var(--ind-l);background:linear-gradient(135deg,#4B20E626,#FF337A0f)}
+summary{list-style:none;cursor:pointer;padding:20px 24px;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:18px;font-weight:400;transition:transform .25s,background .25s}
+details[open] summary::after{transform:rotate(45deg);background:var(--grad);border-color:transparent}
+.ans{padding:0 24px 22px;color:var(--mut);max-width:760px}
+.ans p+p,.ans p+ul,.ans ul+p,.ans p+ol,.ans ol+p{margin-top:12px}
+.ans ul,.ans ol{padding-left:20px;display:grid;gap:8px}
+.ans li::marker{color:var(--ind-l)}
+.ans b{color:#fff}
+.none{display:none;color:var(--mut);padding:8px 0 32px}
+@media(max-width:860px){.faq{grid-template-columns:1fr;gap:24px}.fnav{position:static;flex-direction:row;overflow-x:auto;padding-bottom:6px}.fnav a{white-space:nowrap;border-left:0;border:1px solid var(--line)}}
+
+/* header nav v2 */
+.links{align-items:center}
+.links a[aria-current]{color:#fff;border-bottom:2px solid var(--pink);padding-bottom:4px}
+.dd{position:relative}
+.dd>a i{font-style:normal;font-size:11px;margin-left:4px;opacity:.7;display:inline-block;transition:transform .2s}
+.dd:hover>a i,.dd:focus-within>a i{transform:rotate(180deg)}
+.dm{display:none;position:absolute;top:100%;left:-18px;padding-top:18px;z-index:30}
+.dd:hover .dm,.dd:focus-within .dm{display:block}
+.dmi{min-width:260px;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 20px 50px #000a}
+.dmi a{display:block;padding:11px 14px;border-radius:10px;color:var(--mut);font-size:14px;border:0!important}
+.dmi a:hover{background:#4B20E626;color:#fff}
+.nav>.btn.g{padding:11px 20px;white-space:nowrap}
+@media(max-width:820px){
+ .nav>.btn{display:inline-flex;margin-left:auto;margin-right:10px;padding:10px 14px;font-size:12px}
+ .nav>.btn .ar{display:none}
+ .burger{padding:8px 12px;font-size:16px;line-height:1}
+ header.open .links{max-height:calc(100vh - 72px);overflow:auto}
+ header.open .links .dm{display:block;position:static;padding:8px 0 0 12px}
+ .dmi{background:none;border:0;box-shadow:none;padding:0;min-width:0}
+ .dmi a{padding:8px 12px}
+ .dd>a i{display:none}
+}
+@media(max-width:400px){.logo{font-size:12px}.nav>.btn{padding:9px 11px;font-size:11px;margin-right:8px}}
+.logo img{height:38px;width:auto;display:block}@media(max-width:400px){.logo img{height:32px}}
+</style>
+</head>
+<body>
+<header id="top">
+ <div class="wrap nav">
+  <a class="logo" href="index.html" aria-label="Grid Indigo home"><img src="images/logo.svg" alt="Grid Indigo" width="101" height="38"></a>
+  <nav class="links" id="menu" aria-label="Main"><div class="dd"><a href="capabilities.html">Capabilities <i aria-hidden="true">▾</i></a><div class="dm"><div class="dmi"><a href="capabilities.html#marketing-technology">Marketing Technology</a><a href="capabilities.html#automation-integration">Automation &amp; Integration</a><a href="capabilities.html#data-engineering">Data &amp; Engineering</a><a href="capabilities.html#digital-production">Digital Production</a><a href="capabilities.html#qa-operations">QA &amp; Operations</a></div></div></div><a href="how-we-work.html">How We Work</a><a href="engagement-models.html">How You Can Engage</a><a href="about.html">About</a></nav>
+  <a class="btn g" href="get-started.html">Discuss a Requirement <span class="ar">→</span></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu">☰</button>
+ </div>
+</header>
+
+<main>
+<div class="ph"><div class="wrap">
+ <div class="eye">Frequently asked questions</div>
+ <h1>Good questions. <span class="hl">Clear answers.</span></h1>
+ <p class="lead">Learn more about how Grid Indigo works, what we deliver, how engagements are structured, and what to expect when working with us.</p>
+ <p class="still">Still have questions? Let’s talk about your requirements.</p>
+ <div class="row"><a class="btn p" href="get-started.html">Discuss a Requirement →</a></div>
+</div></div>
+
+<section style="padding-top:64px"><div class="wrap faq">
+ <nav class="fnav" id="fnav" aria-label="FAQ categories"><a href="#general">General</a><a href="#capabilities-services">Capabilities &amp; Services</a><a href="#engagement-models">Engagement Models</a><a href="#pricing-payments">Pricing &amp; Payments</a><a href="#delivery-quality">Delivery &amp; Quality</a><a href="#ai-technology-data">AI, Technology &amp; Data</a><a href="#getting-started">Getting Started</a></nav>
+ <div>
+  <label class="srch"><span class="sr" style="position:absolute;left:-9999px">Search questions</span><input id="q" type="search" placeholder="Search questions" autocomplete="off"></label>
+  <p class="none" id="none">No questions match your search. Try a different word, or <a href="get-started.html" style="color:#fff;text-decoration:underline">tell us about your requirement</a>.</p>
+<section class="fg" id="general"><h2>General Questions</h2>
+<details><summary>What is Grid Indigo?</summary><div class="ans"><p>Grid Indigo is a Digital Delivery &amp; Technology Partner that helps agencies and companies get specialized digital work delivered when their existing teams need more capacity, capability, or ongoing support.</p><p>We support requirements across marketing technology, automation and integration, data and engineering, digital production, and QA and operations.</p><p>Our focus is on delivering agreed outcomes through a structured approach—not simply providing access to individual contractors.</p></div></details>
+<details><summary>Who does Grid Indigo work with?</summary><div class="ans"><p>We work with agencies, marketing teams, digital teams, and companies with specialized digital delivery requirements.</p><p>This includes agencies that need behind-the-scenes delivery support, as well as businesses that need additional technical capability or help managing ongoing digital work.</p></div></details>
+<details><summary>How is Grid Indigo different from a freelancer marketplace or staffing agency?</summary><div class="ans"><p>We focus on delivery rather than selling access to individual people.</p><p>We work with clients to understand requirements, define the scope, determine an appropriate delivery approach, coordinate execution, validate outputs, and complete the agreed handover.</p><p>The exact delivery setup depends on the requirements and engagement model.</p></div></details>
+<details><summary>Where does Grid Indigo operate?</summary><div class="ans"><p>Grid Indigo is building its delivery model to support agencies and companies that need specialized digital work. Engagement availability, working arrangements, and any geographic or regulatory requirements are confirmed during the initial discussion.</p></div></details>
+<details><summary>Does Grid Indigo work with other agencies under a white-label arrangement?</summary><div class="ans"><p>Yes. White-label delivery is one of our engagement options for agencies and partners that need support behind their own brand or client relationships.</p><p>The scope, responsibilities, communication arrangements, confidentiality requirements, and client-facing roles are agreed before work begins.</p></div></details>
+</section>
+<section class="fg" id="capabilities-services"><h2>Capabilities &amp; Services</h2>
+<details><summary>What types of work can Grid Indigo deliver?</summary><div class="ans"><p>Our capability areas include:</p><ul><li><b>Marketing Technology:</b> Platform implementation, campaign setup, audience management, customer journeys, and marketing operations.</li><li><b>Automation &amp; Integration:</b> Workflow automation, APIs, system integration, and data synchronization.</li><li><b>Data &amp; Engineering:</b> SQL, data processing, validation, transformation, and workflow support.</li><li><b>Digital Production:</b> HTML email development, campaign assets, landing page implementation, and production support.</li><li><b>QA &amp; Operations:</b> Functional testing, data validation, campaign QA, monitoring, and handover.</li></ul><p>The work we accept depends on the specific requirements, technical environment, and available delivery capability.</p></div></details>
+<details><summary>Do you only work on marketing-related projects?</summary><div class="ans"><p>Marketing technology and digital marketing operations are important areas, but our capabilities also cover automation, integration, data workflows, digital production, and quality assurance.</p><p>We’ll assess each requirement based on its fit with our capabilities and delivery capacity.</p></div></details>
+<details><summary>Can you work with our existing tools and platforms?</summary><div class="ans"><p>Where technically feasible and within our delivery capability, yes.</p><p>We consider your existing environment, requirements, access arrangements, security constraints, and agreed scope before recommending a solution or delivery approach.</p></div></details>
+<details><summary>Can you take on a project if we already have an internal team?</summary><div class="ans"><p>Absolutely. GI is designed to complement existing teams.</p><p>We can support specialized requirements, delivery overflow, defined projects, or recurring work without requiring you to replace your current team or rebuild your existing processes unnecessarily.</p></div></details>
+<details><summary>Can you guarantee that every requested capability is available?</summary><div class="ans"><p>Not automatically. We assess each requirement before committing to delivery.</p><p>We’ll confirm whether the work fits our capabilities, what resources and access are required, and whether the scope and timeline are realistic before agreeing to the engagement.</p></div></details>
+</section>
+<section class="fg" id="engagement-models"><h2>Engagement Models</h2>
+<details><summary>What are the different ways to work with Grid Indigo?</summary><div class="ans"><p>We offer four engagement models:</p><ul><li><b>Project Delivery:</b> For defined requirements with agreed deliverables and timelines.</li><li><b>Ongoing Service:</b> For recurring work and continued operational support.</li><li><b>Delivery Pod:</b> For sustained delivery capacity across an agreed scope or set of workstreams.</li><li><b>White-Label Delivery:</b> For agencies and partners that need behind-the-scenes delivery support.</li></ul><p>White-label delivery can be combined with project-based, recurring, or capacity-based arrangements.</p></div></details>
+<details><summary>Can I hire Grid Indigo for a one-time project?</summary><div class="ans"><p>Yes. Project Delivery is intended for defined work with an agreed scope, timeline, and set of deliverables.</p><p>Once the agreed project is completed and handed over, there is no automatic ongoing service commitment. Any additional work can be scoped separately.</p></div></details>
+<details><summary>Do I have to sign a long-term contract?</summary><div class="ans"><p>Not necessarily. The commitment depends on the engagement model and the resources or capacity involved.</p><p>A defined project may conclude after the agreed deliverables are completed. Recurring services may be offered on a month-to-month basis, while a Delivery Pod may require an agreed minimum term when capacity needs to be reserved.</p><p>The applicable terms will be explained before you commit.</p></div></details>
+<details><summary>Can I cancel an ongoing service?</summary><div class="ans"><p>Cancellation terms depend on the specific service agreement.</p><p>The agreement will define any required notice period, outstanding fees, work in progress, and non-cancellable commitments. We’ll make those terms clear before the engagement begins.</p></div></details>
+<details><summary>Can I switch engagement models later?</summary><div class="ans"><p>Potentially, yes. If your requirements change, we can discuss whether a different arrangement is appropriate.</p><p>Any change to scope, capacity, pricing, timelines, or responsibilities must be reviewed and agreed before the revised arrangement takes effect.</p></div></details>
+</section>
+<section class="fg" id="pricing-payments"><h2>Pricing &amp; Payments</h2>
+<details><summary>How much does Grid Indigo charge?</summary><div class="ans"><p>Pricing depends on the type of work, complexity, scope, timeline, technical requirements, and delivery arrangement.</p><p>A defined project may be priced as a project fee or against agreed milestones. Ongoing Service and Delivery Pod arrangements are typically priced around the agreed recurring scope or capacity.</p><p>We establish the scope and commercial terms before work begins rather than applying one price to every requirement.</p></div></details>
+<details><summary>Do you offer fixed-price projects?</summary><div class="ans"><p>Where the requirements and deliverables can be clearly defined, we can consider a fixed-price project arrangement.</p><p>The proposal will specify the included work, deliverables, assumptions, exclusions, timeline, payment schedule, and process for handling changes.</p><p>Requirements that remain uncertain may need further discovery or a separately agreed assessment before a reliable estimate can be provided.</p></div></details>
+<details><summary>Do you require a deposit?</summary><div class="ans"><p>Deposit requirements depend on the engagement and will be stated in the proposal or agreement.</p><p>The payment schedule may reflect project milestones, upfront commitments, or other agreed commercial terms.</p></div></details>
+<details><summary>What happens if the scope changes during a project?</summary><div class="ans"><p>We’ll assess the impact of the change on deliverables, timeline, cost, dependencies, and required resources.</p><p>Any additional or revised work must be agreed before it is incorporated into the delivery scope.</p></div></details>
+<details><summary>Do you charge for work outside the original scope?</summary><div class="ans"><p>Work outside the agreed scope may require a separate estimate, change request, or additional fee.</p><p>We’ll clarify the impact and obtain the necessary approval before proceeding.</p></div></details>
+</section>
+<section class="fg" id="delivery-quality"><h2>Delivery, Quality &amp; Communication</h2>
+<details><summary>How does your delivery process work?</summary><div class="ans"><p>Our delivery process follows five stages:</p><ol><li>Understand the requirement.</li><li>Define the scope.</li><li>Assemble the delivery approach.</li><li>Execute and manage delivery.</li><li>QA, handoff, and improvement.</li></ol><p>The process is adapted to the complexity, duration, and requirements of each engagement.</p></div></details>
+<details><summary>How long does a project take?</summary><div class="ans"><p>Timelines depend on scope, complexity, dependencies, access, approvals, and resource availability.</p><p>Once we understand the requirement, we’ll establish a realistic timeline and identify the key assumptions or dependencies that could affect delivery.</p></div></details>
+<details><summary>How do you ensure quality?</summary><div class="ans"><p>We define acceptance criteria and relevant checks based on the agreed work.</p><p>Depending on the project, this may include functional testing, data validation, campaign checks, technical reviews, defect documentation, and retesting.</p><p>The specific quality checks and acceptance process are agreed as part of the scope.</p></div></details>
+<details><summary>How will we receive project updates?</summary><div class="ans"><p>The communication approach is established at the beginning of the engagement.</p><p>Depending on the scope and duration, this may include scheduled updates, milestone reviews, issue escalation, and documented handover notes.</p><p>We aim to make progress, risks, blockers, and next steps clear throughout delivery.</p></div></details>
+<details><summary>What happens if a deliverable does not meet the agreed requirements?</summary><div class="ans"><p>We’ll review the issue against the agreed scope and acceptance criteria and determine the appropriate corrective action under the applicable agreement.</p><p>The scope, acceptance process, review periods, and treatment of changes or new requirements should be clear before execution begins.</p></div></details>
+<details><summary>Do you provide documentation and handover?</summary><div class="ans"><p>Where included in the agreed scope, yes. Handover may include delivered files, relevant technical documentation, configuration details, validation results, operational instructions, and outstanding items.</p><p>The exact handover package depends on the work being delivered.</p></div></details>
+</section>
+<section class="fg" id="ai-technology-data"><h2>AI, Technology &amp; Data</h2>
+<details><summary>Does Grid Indigo use AI?</summary><div class="ans"><p>AI and automation may be used to support appropriate parts of our delivery process, such as analysis, repetitive tasks, documentation, and workflow improvement.</p><p>Their use depends on the requirements, technical environment, security considerations, and suitability of the task. We do not treat AI as a substitute for appropriate technical judgment, validation, or accountability.</p></div></details>
+<details><summary>Is Grid Indigo an AI company?</summary><div class="ans"><p>No. Grid Indigo is a Digital Delivery &amp; Technology Partner.</p><p>AI is one of the technologies that may support our delivery system. Our core focus remains helping clients get specialized digital work delivered.</p></div></details>
+<details><summary>How do AI and human expertise work together?</summary><div class="ans"><p>AI and automation can assist with specific tasks, while people remain responsible for decisions, technical validation, risk assessment, and meeting agreed requirements.</p><p>The level of human review depends on the nature and risk of the work. Outputs that affect production systems, client data, or critical business processes require appropriate verification.</p></div></details>
+<details><summary>How do you handle confidential information and access?</summary><div class="ans"><p>Access requirements, confidentiality obligations, and permitted data handling should be agreed before work begins.</p><p>We work within the applicable contractual and security requirements of the engagement. Clients should identify any specific policies, data restrictions, or approval requirements during scoping so that the delivery approach can account for them.</p></div></details>
+</section>
+<section class="fg" id="getting-started"><h2>Getting Started</h2>
+<details><summary>How do we get started?</summary><div class="ans"><p>Start by contacting us with a brief description of the work you need done.</p><p>We’ll discuss the requirement, clarify the expected outcomes, and determine whether the work fits our capabilities and delivery capacity. If there’s a fit, we’ll define the scope, proposed approach, timeline, and commercial terms.</p></div></details>
+<details><summary>What information should I prepare before contacting you?</summary><div class="ans"><p>You don’t need a complete technical specification to start a conversation.</p><p>If available, it helps to share:</p><ul><li>The problem or requirement</li><li>Your desired outcome</li><li>Relevant platforms, systems, or workflows</li><li>Expected timelines or deadlines</li><li>Any known constraints, dependencies, or security requirements</li></ul><p>We’ll help identify any missing information during the initial discussion.</p></div></details>
+<details><summary>What happens after the initial discussion?</summary><div class="ans"><p>If the requirement is a fit, we’ll determine the next steps. Depending on the complexity, this may involve a discovery or assessment phase, a scoped proposal, a statement of work, or an agreed project plan.</p><p>No delivery commitment is assumed until the relevant scope and terms have been agreed.</p></div></details>
+<details><summary>What if I’m not sure which engagement model I need?</summary><div class="ans"><p>That’s fine. Start with the requirement itself.</p><p>We’ll discuss the type of work, whether it’s one-time or recurring, and the level of delivery support needed. From there, we can recommend an appropriate engagement arrangement.</p></div></details>
+</section>
+
+ </div>
+</div></section>
+
+<section class="fc" style="padding-top:0">
+ <div class="wrap"><div class="box rv">
+  <div><div class="eye">Still have questions?</div><h2>Let’s talk about what you need to deliver.</h2><p>Tell us about your requirement, your current challenges, or the work your team needs support with. We’ll help you determine whether Grid Indigo is the right fit and what the next steps could look like.</p></div>
+  <div class="row"><a class="btn w" href="get-started.html">Discuss a Requirement →</a><a class="btn" href="capabilities.html">Explore Our Capabilities →</a></div>
+ </div></div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fgrid">
+   <div><a class="logo" href="index.html" style="color:#fff"><img src="images/logo.svg" alt="Grid Indigo" width="101" height="38"></a></div>
+   <div><h4>Capabilities</h4><a href="capabilities.html#marketing-technology">Marketing Technology</a><a href="capabilities.html#automation-integration">Automation &amp; Integration</a><a href="capabilities.html#digital-production">Digital Production</a><a href="capabilities.html#data-engineering">Data &amp; Engineering</a><a href="capabilities.html#qa-operations">QA &amp; Operations</a></div>
+   <div><h4>How We Work</h4><a href="how-we-work.html#process">Our Process</a><a href="engagement-models.html">How You Can Engage</a><a href="how-we-work.html#approach">Our Approach</a></div>
+   <div><h4>Company</h4><a href="about.html">About</a><a href="how-we-work.html">How We Work</a><a href="faq.html">FAQ</a><a href="#">Careers</a><a href="get-started.html">Contact</a></div>
+   <div><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+  </div>
+  <div class="fbot"><span>Your Digital Delivery &amp; Technology Partner.</span><span>© 2026 Grid Indigo. All rights reserved.</span></div>
+ </div>
+</footer>
+<script>
+(function(){
+document.documentElement.classList.add("js");
+var h=document.querySelector("header"),bg=document.getElementById("burger");
+bg.onclick=function(){var o=h.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
+var q=document.getElementById("q"),ds=[].slice.call(document.querySelectorAll("details")),gs=[].slice.call(document.querySelectorAll(".fg")),none=document.getElementById("none");
+q.addEventListener("input",function(){
+ var t=q.value.trim().toLowerCase(),any=false;
+ ds.forEach(function(d){var m=!t||d.textContent.toLowerCase().indexOf(t)>-1;d.hidden=!m;if(m)any=true;d.open=!!t&&m});
+ gs.forEach(function(g){g.hidden=!g.querySelector("details:not([hidden])")});
+ none.style.display=any?"none":"block";
+});
+var links=[].slice.call(document.querySelectorAll("#fnav a"));
+if("IntersectionObserver" in window){
+ var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-25% 0px -65% 0px"});
+ gs.forEach(function(g){so.observe(g)});
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+ document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+}else{document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in")})}
+})();
+</script>
+<script>
+(function(){var h=document.querySelector("header"),b=document.getElementById("burger");if(!h||!b)return;
+[].forEach.call(document.querySelectorAll("#menu a"),function(a){a.addEventListener("click",function(){h.classList.remove("open");b.setAttribute("aria-expanded","false")})})})();
+</script>
+</body>
+</html>
