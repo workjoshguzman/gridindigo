@@ -178,18 +178,21 @@ nx.onclick=function(){
  new FormData(f).forEach(function(v,k){o[k]=o[k]?o[k]+", "+v:v});
  if(o._gotcha)return;
  function finish(note){f.hidden=true;document.getElementById("prog").hidden=true;if(note)document.getElementById("donemsg").textContent=note;document.getElementById("done").hidden=false;window.scrollTo({top:0,behavior:"smooth"})}
- if(!ENDPOINT){
+ function emailFallback(intro){
   var lines=[];Object.keys(o).forEach(function(k){if(k!=="_gotcha"&&k!=="privacy_ack")lines.push(k.replace(/_/g," ")+": "+o[k])});
   var href="mailto:gridindigosystems@gmail.com?subject="+encodeURIComponent("Requirement from "+(o.company||o.first_name||"website"))+"&body="+encodeURIComponent(lines.join("\n"));
   finish();
   document.querySelector("#done h2").textContent="One last step.";
-  var m=document.getElementById("donemsg");m.textContent="Our online form is still being connected, so your answers haven’t reached us yet. Send them by email in one click: your answers are already filled in. ";
-  var a=document.createElement("a");a.href=href;a.className="btn g";a.style.cssText="margin-top:16px;background:linear-gradient(90deg,#4B20E6,#FF337A);border:0;color:#fff";a.textContent="Email my requirement →";m.appendChild(document.createElement("br"));m.appendChild(a);
-  return}
- nx.disabled=true;nx.textContent="Sending…";
- fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(o)})
- .then(function(r){if(!r.ok)throw 0;finish()})
- .catch(function(){nx.disabled=false;nx.textContent="Submit Enquiry →";err.textContent="Something went wrong and your enquiry wasn’t sent. Please try again."});
+  var m=document.getElementById("donemsg");m.textContent=intro+" Send your answers by email instead: they are already filled in. ";
+  var a=document.createElement("a");a.href=href;a.className="btn g";a.style.cssText="margin-top:16px;background:linear-gradient(90deg,#4B20E6,#FF337A);border:0;color:#fff";a.textContent="Email my requirement \u2192";m.appendChild(document.createElement("br"));m.appendChild(a);
+ }
+ if(!ENDPOINT){emailFallback("Our online form is still being connected, so your answers haven\u2019t reached us yet.");return}
+ nx.disabled=true;nx.textContent="Sending\u2026";
+ // text/plain keeps this a simple request, which Google Apps Script accepts without extra browser checks
+ fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(o)})
+ .then(function(r){return r.json()})
+ .then(function(res){if(!res||!res.ok)throw 0;finish()})
+ .catch(function(){nx.disabled=false;nx.textContent="Submit Enquiry \u2192";emailFallback("Something went wrong and your enquiry didn\u2019t reach us.")});
 };
 document.getElementById("form").addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName!=="TEXTAREA"&&e.target.type!=="checkbox"&&e.target.type!=="radio"){e.preventDefault();nx.click()}});
 go(0);
