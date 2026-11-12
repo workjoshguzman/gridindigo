@@ -141,7 +141,8 @@ const CONFIDENTIALITY_NOTICE =
   'disclosure or copying is prohibited.';
 const PRIVACY_NOTICE =
   'DATA PRIVACY: Grid Indigo processes the personal data you submitted only to respond to your enquiry, in line ' +
-  'with the Data Privacy Act of 2012 (RA 10173). To ask about or update your data, reply to this email.';
+  'with applicable data protection laws. See our Privacy Policy at gridindigo.com/privacy.html or reply to this ' +
+  'email to ask about or update your data.';
 
 function emailHtml_(paragraphs) {
   const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
