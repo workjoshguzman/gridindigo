@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Careers | Grid Indigo</title>
+<meta name="description" content="Join the Grid Indigo talent pool. Remote digital delivery roles for junior specialists and senior marketing technology consultants.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070f;--bg2:#0d0d1c;--card:#12122499;--line:#ffffff1f;--tx:#f2f2f8;--mut:#a3a3bd;--ind:#4B20E6;--pink:#FF337A;--ind-l:#8c6bff;--grad:linear-gradient(90deg,#4B20E6,#FF337A);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ind-l);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h1,h2,h3,p,ul{margin:0}
+h1{font-size:clamp(38px,6vw,68px);font-weight:500;line-height:1.08}
+h2{font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.15}
+h3{font-size:18px;font-weight:600}
+.hl{background:linear-gradient(90deg,#8c6bff,#FF337A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eye{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ind-l);margin-bottom:16px;font-weight:600}
+.mut{color:var(--mut)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:14px;border:1px solid var(--line);background:transparent;color:var(--tx);cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,border-color .2s}
+.btn:hover{border-color:#fff8;transform:translateY(-2px)}
+.btn.p{background:var(--ind);border-color:var(--ind)}
+.btn.p:hover{box-shadow:0 8px 30px #4B20E699}
+.btn.g{background:var(--grad);border:0}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:#07070fcc;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.06em;line-height:1.05}
+.mark{width:28px;height:28px;background:#fff;border-radius:4px;position:relative}
+.mark::after{content:"";position:absolute;inset:7px 7px 7px 11px;background:var(--bg)}
+.links{display:flex;gap:32px;font-size:14px;color:var(--mut)}
+.links a:hover,.links a[aria-current]{color:#fff}
+.links a[aria-current]{border-bottom:2px solid var(--pink);padding-bottom:4px}
+.burger{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:8px;padding:8px 12px;font:inherit;cursor:pointer}
+@media(max-width:820px){.links,.nav>.btn{display:none}.burger{display:block}header.open .links{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--bg2);padding:20px 24px;gap:18px;border-bottom:1px solid var(--line)}}
+/* hero: left aligned, page-level */
+.ph{position:relative;overflow:hidden;padding:80px 0 72px;background:radial-gradient(ellipse 50% 80% at 90% 0,#4B20E659,transparent),radial-gradient(ellipse 40% 50% at 0 100%,#FF337A1f,transparent)}
+.ph::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000);mask-image:linear-gradient(90deg,transparent 30%,#000)}
+.ph .wrap{position:relative;display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:end}
+.ph p.lead{color:var(--mut);font-size:17px;max-width:560px;margin:22px 0 32px}
+.jump{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:22px 24px;backdrop-filter:blur(8px)}
+.jump h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+.jump a{display:flex;justify-content:space-between;padding:11px 0;border-top:1px solid var(--line);font-size:15px;transition:color .2s,padding .2s}
+.jump a:first-of-type{border-top:0}
+.jump a:hover{color:var(--ind-l);padding-left:6px}
+@media(max-width:860px){.ph .wrap{grid-template-columns:1fr}.ph{padding:56px 0}}
+/* explorer */
+.ex-head{max-width:640px;margin-bottom:44px}
+.ex-head p{margin-top:16px;color:var(--mut)}
+.ex{display:grid;grid-template-columns:290px 1fr;gap:32px;align-items:start}
+.tabs{position:sticky;top:96px;display:flex;flex-direction:column;gap:8px}
+.tabs a{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;color:var(--mut);font-weight:500;transition:all .2s}
+.tabs a:hover{color:#fff;border-color:var(--ind-l)}
+.tabs a[aria-current]{color:#fff;border-color:transparent;background:linear-gradient(135deg,#4B20E6,#a3238f 70%,#FF337A)}
+.tabs i{font-style:normal;flex:none;width:30px;height:30px;border-radius:9px;background:#ffffff14;display:grid;place-items:center;font-size:13px;font-weight:700}
+.cp{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:40px;position:relative;overflow:hidden}
+.cp::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad)}
+.js .cp{display:none}
+.js .cp.on{display:block;animation:in .45s ease both}
+.js:not(.ready) .cp{display:none}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cp+.cp{margin-top:20px}
+.js .cp+.cp{margin-top:0}
+.cp .tg{color:var(--ind-l);font-weight:600;margin-bottom:6px}
+.cp>p{color:var(--mut);margin:14px 0 30px;max-width:620px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.cols h4{margin:0 0 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.cols ul{list-style:none;padding:0;display:grid;gap:11px;font-size:15px}
+.cols li{display:flex;gap:12px}
+.cols li::before{content:"";flex:none;width:7px;height:7px;margin-top:9px;border-radius:50%;background:var(--ind-l)}
+.cols .out li::before{background:var(--pink)}
+@media(max-width:860px){.ex{grid-template-columns:1fr}.tabs{position:static;flex-direction:row;overflow-x:auto;padding-bottom:6px}.tabs a{white-space:nowrap}.cols{grid-template-columns:1fr}.cp{padding:28px 22px}}
+/* tools */
+.tools{background:var(--bg2);border-block:1px solid var(--line)}
+.tl{margin-top:40px;border-top:1px solid var(--line)}
+.tr{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center}
+.tr h3{font-size:15px;color:var(--mut);font-weight:500}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills span{padding:9px 18px;border-radius:12px;border:1px solid var(--line);background:#ffffff0a;font-weight:600;font-size:14px;transition:border-color .2s,background .2s}
+.pills span:hover{border-color:var(--ind-l);background:#4B20E626}
+.fine{margin-top:28px;font-size:13px;color:var(--mut);max-width:760px}
+@media(max-width:760px){.tr{grid-template-columns:1fr;gap:12px}}
+/* final cta */
+.fc{padding:96px 0}
+.fc .box{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;padding:56px;border-radius:26px;background:linear-gradient(120deg,#4B20E6cc,#2a1180 55%,#7a1a5c);position:relative;overflow:hidden}
+.fc .box::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,#FF337A66,transparent 70%)}
+.fc .box>*{position:relative;z-index:1}
+.fc .eye{color:#ffd0e0}
+.fc p{margin-top:14px;color:#e6e2ff}
+.fc .row{justify-content:flex-end}
+.fc .btn{border-color:#ffffff66}
+.fc .btn.w{background:#fff;color:#1a0f5c;border-color:#fff}
+@media(max-width:860px){.fc .box{grid-template-columns:1fr;padding:36px 24px}.fc .row{justify-content:flex-start}}
+footer{border-top:1px solid var(--line);padding:56px 0 32px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px}
+.fgrid h4{margin:0 0 14px;font-size:13px;font-weight:600}
+.fgrid a{display:block;color:var(--mut);margin-bottom:10px}
+.fgrid a:hover{color:#fff}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:40px;color:var(--mut);font-size:13px}
+@media(max-width:820px){.fgrid{grid-template-columns:1fr 1fr}}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+
+/* image placeholders */
+figure.media{margin:0;position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line);background:linear-gradient(135deg,#1a1442,#0d0d1c 60%,#2a1140);aspect-ratio:var(--r,4/3);display:grid;place-items:center}
+figure.media::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0f 1px,transparent 1px),linear-gradient(90deg,#ffffff0f 1px,transparent 1px);background-size:32px 32px}
+figure.media::after{content:"";position:absolute;width:55%;aspect-ratio:1;right:-10%;top:-25%;border-radius:50%;background:radial-gradient(circle,#FF337A55,transparent 70%)}
+figure.media .pn{position:relative;z-index:1;text-align:center;font-size:12px;color:#ffffffa6;line-height:1.5;padding:16px}
+figure.media .pn b{display:block;color:#fff;font-size:13px;margin-bottom:2px}
+figure.media.has::before,figure.media.has::after{display:none}
+figure.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.r43{--r:4/3}.r169{--r:16/9}.r219{--r:21/9}
+
+/* header nav v2 */
+.links{align-items:center}
+.links a[aria-current]{color:#fff;border-bottom:2px solid var(--pink);padding-bottom:4px}
+.dd{position:relative}
+.dd>a i{font-style:normal;font-size:11px;margin-left:4px;opacity:.7;display:inline-block;transition:transform .2s}
+.dd:hover>a i,.dd:focus-within>a i{transform:rotate(180deg)}
+.dm{display:none;position:absolute;top:100%;left:-18px;padding-top:18px;z-index:30}
+.dd:hover .dm,.dd:focus-within .dm{display:block}
+.dmi{min-width:260px;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 20px 50px #000a}
+.dmi a{display:block;padding:11px 14px;border-radius:10px;color:var(--mut);font-size:14px;border:0!important}
+.dmi a:hover{background:#4B20E626;color:#fff}
+.nav>.btn.g{padding:11px 20px;white-space:nowrap}
+@media(max-width:820px){
+ .nav>.btn{display:inline-flex;margin-left:auto;margin-right:10px;padding:10px 14px;font-size:12px}
+ .nav>.btn .ar{display:none}
+ .burger{padding:8px 12px;font-size:16px;line-height:1}
+ header.open .links{max-height:calc(100vh - 72px);overflow:auto}
+ header.open .links .dm{display:block;position:static;padding:8px 0 0 12px}
+ .dmi{background:none;border:0;box-shadow:none;padding:0;min-width:0}
+ .dmi a{padding:8px 12px}
+ .dd>a i{display:none}
+}
+@media(max-width:400px){.logo{font-size:12px}.nav>.btn{padding:9px 11px;font-size:11px;margin-right:8px}}
+.logo img{height:38px;width:auto;display:block}@media(max-width:400px){.logo img{height:32px}}
+.role{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:36px;position:relative;overflow:hidden}
+.role::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad)}
+.role+.role{margin-top:20px}
+.role .tg{color:var(--ind-l);font-weight:600;margin-bottom:6px}
+.role>p{color:var(--mut);margin:14px 0 26px;max-width:680px}
+.note{margin-top:28px;padding:18px 22px;border:1px solid #FF337A66;border-radius:14px;background:#FF337A14;font-size:14px;color:#ffd0e0}
+.jump p{font-size:14px;color:var(--mut);padding:10px 0;border-top:1px solid var(--line)}.jump p:first-of-type{border-top:0}
+</style>
+</head>
+<body>
+<header id="top">
+ <div class="wrap nav">
+  <a class="logo" href="index.html" aria-label="Grid Indigo home"><img src="images/logo.png" alt="Grid Indigo" width="101" height="38"></a>
+  <nav class="links" id="menu" aria-label="Main"><div class="dd"><a href="capabilities.html">Capabilities <i aria-hidden="true">▾</i></a><div class="dm"><div class="dmi"><a href="capabilities.html#marketing-technology">Marketing Technology</a><a href="capabilities.html#automation-data">Automation, Integration &amp; Data</a><a href="capabilities.html#digital-production">Digital Production</a><a href="capabilities.html#digital-operations">Digital Operations</a></div></div></div><a href="how-we-work.html">How We Work</a><a href="engagement-models.html">How You Can Engage</a><a href="about.html">About</a></nav>
+  <a class="btn g" href="get-started.html">Discuss a Requirement <span class="ar">→</span></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu">☰</button>
+ </div>
+</header>
+
+<main>
+<div class="ph">
+ <div class="wrap">
+  <div>
+   <div class="eye">Careers</div>
+   <h1>Build your career in <span class="hl">real client delivery.</span></h1>
+   <p class="lead">Grid Indigo delivers digital work for agencies and businesses in Australia, New Zealand and Singapore. We’re building a screened talent pool of specialists and consultants who care about getting work right and on time.</p>
+   <div class="row"><a class="btn g" href="https://forms.gle/vmngXoRjGwcuPkvZA" target="_blank" rel="noopener">Join the Talent Pool →</a><a class="btn" href="#roles">See the roles ↓</a></div>
+  </div>
+  <div class="jump">
+   <h3>How our talent pool works</h3>
+   <p><b>1. Apply.</b> Tell us about your skills and availability. It takes about 10 minutes.</p>
+   <p><b>2. Assessment.</b> Shortlisted applicants complete a short, practical assessment.</p>
+   <p><b>3. Matched to projects.</b> When a client project fits your skills, we contact you to agree the role and terms.</p>
+  </div>
+ </div>
+</div>
+
+<section id="roles">
+ <div class="wrap">
+  <div class="ex-head"><div class="eye">Open to applications</div><h2>Roles we’re building for.</h2><p>Joining the talent pool is not a job offer or a guarantee of work. Roles open as client projects are confirmed, and every engagement is agreed in writing first.</p></div>
+  <article class="role rv"><h3 class="tg">Remote · Full-time when available · Fresh grads and career shifters welcome</h3><h2>Junior Digital Specialist</h2>
+   <p>Learn real client delivery from day one: building emails and pages, updating websites, and supporting marketing platform work, with every deliverable checked before it reaches the client.</p>
+   <div class="cols"><div><h4>What you’ll work on</h4><ul><li>Building and updating HTML emails and landing pages</li><li>Website and CMS content updates, and localizing content for new markets</li><li>Supporting marketing platform work, such as Salesforce Marketing Cloud</li><li>Reviewing each other’s work before it reaches the client</li></ul></div><div class="out"><h4>What we look for</h4><ul><li>Strong attention to detail</li><li>Clear written English and comfort talking with clients</li><li>Basic HTML/CSS, design or website experience is a plus, not a must</li><li>You meet deadlines and speak up early when something is at risk</li></ul></div></div></article>
+  <article class="role rv"><h3 class="tg">Remote · On-call and project-based · Paid hourly by invoice</h3><h2>Senior Consultant – Marketing Technology</h2>
+   <p>Lead complex marketing platform work for our clients and guide the specialists who build alongside you. No fixed hours and no minimum commitment.</p>
+   <div class="cols"><div><h4>What you’ll work on</h4><ul><li>Complex builds: journeys, automations, workflows, AMPscript/SSJS and SQL</li><li>Reviewing and guiding the work of our specialists</li><li>Technical input when we scope and estimate client work</li></ul></div><div class="out"><h4>What we look for</h4><ul><li>3+ years of hands-on Salesforce Marketing Cloud or Adobe Campaign Classic work</li><li>Experience with enterprise clients and production deadlines</li><li>Adobe Journey Optimizer, CDP or API integration experience is a plus</li></ul></div></div></article>
+  <p class="note">Grid Indigo never asks applicants for any fee or payment, and only contacts applicants from our official channels. If someone asks you to pay to join, it isn’t us.</p>
+ </div>
+</section>
+
+<section class="fc">
+ <div class="wrap"><div class="box rv">
+  <div><div class="eye">Interested?</div><h2>Join the Grid Indigo talent pool.</h2><p>Apply once. We’ll reach out when a project matches your skills and availability.</p></div>
+  <div class="row"><a class="btn w" href="https://forms.gle/vmngXoRjGwcuPkvZA" target="_blank" rel="noopener">Apply Now →</a></div>
+ </div></div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fgrid">
+   <div><a class="logo" href="index.html" style="color:#fff"><img src="images/logo.png" alt="Grid Indigo" width="101" height="38"></a></div>
+   <div><h4>Capabilities</h4><a href="capabilities.html#marketing-technology">Marketing Technology</a><a href="capabilities.html#automation-data">Automation, Integration &amp; Data</a><a href="capabilities.html#digital-production">Digital Production</a><a href="capabilities.html#digital-operations">Digital Operations</a></div>
+   <div><h4>How We Work</h4><a href="how-we-work.html#process">Our Process</a><a href="engagement-models.html">How You Can Engage</a><a href="how-we-work.html#approach">Our Approach</a></div>
+   <div><h4>Company</h4><a href="about.html">About</a><a href="how-we-work.html">How We Work</a><a href="faq.html">FAQ</a><a href="careers.html">Careers</a><a href="get-started.html">Contact</a></div>
+   <div><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+  </div>
+  <div class="fbot"><span>Your Digital Delivery &amp; Technology Partner.</span><span>© 2026 Grid Indigo. All rights reserved.</span></div>
+ </div>
+</footer>
+
+<script>
+(function(){
+var de=document.documentElement;de.classList.add("js");
+var tabs=[].slice.call(document.querySelectorAll("#tabs a")),ps=[].slice.call(document.querySelectorAll(".cp"));if(!ps.length){de.classList.add("ready")}
+function pick(){
+ var id=(location.hash||"").slice(1),i=0;
+ ps.forEach(function(p,j){if(p.id===id)i=j});
+ ps.forEach(function(p,j){p.classList.toggle("on",j===i)});
+ tabs.forEach(function(t,j){if(j===i)t.setAttribute("aria-current","true");else t.removeAttribute("aria-current")});
+ de.classList.add("ready");
+}
+window.addEventListener("hashchange",pick);pick();
+var h=document.querySelector("header"),bg=document.getElementById("burger");
+bg.onclick=function(){var o=h.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
+var els=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add("in")})}
+})();
+</script>
+<script>
+/* Image slots: drop a file with the listed name into /images and it replaces the placeholder automatically. */
+(function(){[].forEach.call(document.querySelectorAll("figure.media[data-src]"),function(f){var i=new Image();i.onload=function(){f.classList.add("has");f.innerHTML="";i.alt=f.getAttribute("data-alt")||"";i.loading="lazy";f.appendChild(i)};i.src=f.getAttribute("data-src")})})();
+</script>
+<script>
+(function(){var h=document.querySelector("header"),b=document.getElementById("burger");if(!h||!b)return;
+[].forEach.call(document.querySelectorAll("#menu a"),function(a){a.addEventListener("click",function(){h.classList.remove("open");b.setAttribute("aria-expanded","false")})})})();
+</script>
+</body>
+</html>
