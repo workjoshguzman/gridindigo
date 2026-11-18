@@ -157,6 +157,31 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;font-size:14px}
 @media(max-width:400px){.logo{font-size:12px}.nav>.btn{padding:9px 11px;font-size:11px;margin-right:8px}}
 .logo img{height:38px;width:auto;display:block}@media(max-width:400px){.logo img{height:32px}}
 html,body{overflow-x:clip}
+
+/* Compare: in-house hire vs Grid Indigo */
+#compare{padding-top:0}
+.cmp{margin-top:40px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg2)}
+.cmp-row{display:grid;grid-template-columns:1.1fr 1fr 1fr;border-top:1px solid var(--line)}
+.cmp-row:first-child{border-top:0}
+.cmp-row>div{padding:18px 22px;font-size:14.5px;line-height:1.5}
+.cmp-row .k{font-weight:600;color:var(--tx)}
+.cmp-row .a{color:var(--mut)}
+.cmp-row .b{color:var(--tx);background:linear-gradient(180deg,#4B20E61f,#FF337A12);border-left:1px solid #8c6bff55}
+.cmp-head>div{padding:22px}
+.cmp-head .a,.cmp-head .b{display:flex;flex-direction:column;gap:4px}
+.cmp-head .t{font-size:18px;font-weight:700;color:var(--tx)}
+.cmp-head .s{font-size:12.5px;color:var(--mut)}
+.cmp-head .b .t{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chip{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--grad);color:#fff;margin-bottom:6px}
+.mk{display:inline-block;width:18px;margin-right:6px;font-weight:700}
+.b .mk{color:#5fd39b}.a .mk{color:var(--mut)}
+.cmp-note{margin-top:18px;font-size:13px;color:var(--mut);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+@media (max-width:720px){
+ .cmp-row{grid-template-columns:1fr 1fr}
+ .cmp-row .k{grid-column:1/-1;padding-bottom:4px;background:#ffffff08}
+ .cmp-head .k{display:none}
+ .cmp-row>div{padding:12px 14px;font-size:13.5px}
+}
 </style>
 </head>
 <body>
@@ -263,12 +288,27 @@ html,body{overflow-x:clip}
  </div>
 </section>
 
+
+<section id="compare">
+ <div class="wrap">
+  <div class="split">
+   <div><div class="eye">Compare Grid Indigo</div><h2>Hiring in-house, or <span class="hl">Grid Indigo?</span></h2></div>
+   <p class="mut">Both get the work done. The difference is what it takes to get there, and what it costs you along the way.</p>
+  </div>
+  <div class="cmp rv">
+   <div class="cmp-row cmp-head"><div class="k"></div><div class="a"><span class="t">In-house specialist</span><span class="s">Hire and manage your own</span></div><div class="b"><span class="chip">Flexible</span><span class="t">Grid Indigo</span><span class="s">Specialist capacity, delivered</span></div></div>
+   <div class="cmp-row"><div class="k">Time to start</div><div class="a"><span class="mk">–</span>Weeks to months of recruiting</div><div class="b"><span class="mk">✓</span>Days, after a short discovery call</div></div><div class="cmp-row"><div class="k">Hiring and onboarding</div><div class="a"><span class="mk">–</span>Recruitment, onboarding and equipment costs</div><div class="b"><span class="mk">✓</span>Included</div></div><div class="cmp-row"><div class="k">Leave, sick days, resignations</div><div class="a"><span class="mk">–</span>Work pauses until someone is back or replaced</div><div class="b"><span class="mk">✓</span>A backup specialist steps in</div></div><div class="cmp-row"><div class="k">Quality check before delivery</div><div class="a"><span class="mk">–</span>Depends on who has time to review</div><div class="b"><span class="mk">✓</span>Every deliverable checked before handover</div></div><div class="cmp-row"><div class="k">Scaling up or down</div><div class="a"><span class="mk">–</span>Hire, or let someone go</div><div class="b"><span class="mk">✓</span>Change your monthly hours</div></div><div class="cmp-row"><div class="k">Employer obligations</div><div class="a"><span class="mk">–</span>Payroll, tax, leave and notice periods</div><div class="b"><span class="mk">✓</span>One monthly invoice</div></div><div class="cmp-row"><div class="k">Commitment</div><div class="a"><span class="mk">–</span>A permanent role</div><div class="b"><span class="mk">✓</span>6- or 12-month plans, or a one-off project</div></div><div class="cmp-row"><div class="k">Cost</div><div class="a"><span class="mk">–</span>Full salary plus on-costs</div><div class="b"><span class="mk">✓</span>Priced below the full cost of a local hire</div></div><div class="cmp-row"><div class="k">Knowing your business</div><div class="a"><span class="mk">✓</span>Deep, built over time</div><div class="b"><span class="mk">✓</span>We work inside your tools and process, and learn as we go</div></div>
+  </div>
+  <div class="cmp-note"><span>Your exact savings depend on your market and the work involved. We show them in your quote.</span><a class="btn g" href="get-started.html">See what you'd save →</a></div>
+ </div>
+</section>
+
 <div class="final" id="start">
  <div class="box rv">
   <div class="eye">Ready to get started</div>
   <h2>Have work <span class="hl">your team can’t absorb?</span></h2>
   <p>Tell us what you need to get delivered. We’ll help determine the simplest and most effective way to support you.<br><b style="color:#fff;font-weight:600">No commitment. Just a conversation about the requirement.</b></p>
-  <div class="row"><a class="btn g" href="get-started.html">Start a Conversation →</a></div>
+  <div class="row"><a class="btn g" href="get-started.html">Start a Conversation →</a><a class="btn" href="#compare">Compare Grid Indigo →</a></div>
  </div>
 </div>
 </main>
